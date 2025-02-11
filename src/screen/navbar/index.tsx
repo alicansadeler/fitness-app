@@ -1,5 +1,5 @@
 import logo from "../../assets/logo.png";
-import Link from "./link";
+import Link from "./Link";
 import { SelectedPage } from "../../shared/types";
 
 type Props = {
