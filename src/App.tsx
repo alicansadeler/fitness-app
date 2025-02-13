@@ -1,16 +1,29 @@
-import { useState } from "react";
-import "./App.css";
+import { useEffect, useState } from "react";
 import Navbar from "./screen/navbar";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [isTopOfPage, setIsTopOfPage] = useState<boolean>(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsTopOfPage(true);
+      }
+      if (window.scrollY != 0) {
+        setIsTopOfPage(false);
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <>
-      <div>
-        <Navbar></Navbar>
+      <div className="app bg-gray-20">
+        <Navbar isTopOfPage={isTopOfPage}></Navbar>
+        <p className="mt-96">aaa</p>
+        <p className="mt-96">aaa</p>
+        <p className="mt-96">aaa</p>
       </div>
-      <p className="text-2xl">Ali Can SADELER</p>
     </>
   );
 }
