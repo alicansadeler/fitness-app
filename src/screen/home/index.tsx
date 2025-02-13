@@ -7,10 +7,10 @@ import { SelectedPage } from "../../shared/types";
 import ActionButton from "../../shared/ActionButton";
 
 type Props = {
-  setSelecetedPage: (value: SelectedPage) => void;
+  setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Home = ({ setSelecetedPage }: Props) => {
+const Home = ({ setSelectedPage }: Props) => {
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
       <motion.div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6">
@@ -47,7 +47,7 @@ const Home = ({ setSelecetedPage }: Props) => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                <ActionButton setSelectedPage={setSelecetedPage}>
+                <ActionButton setSelectedPage={setSelectedPage}>
                   Join Now
                 </ActionButton>
 
