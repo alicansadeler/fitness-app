@@ -8,6 +8,7 @@ import { BenefitsType, SelectedPage } from "../shared/types";
 import Htext from "../shared/Htext";
 import BenefitDesing from "./benefitDesign";
 import ActionButton from "../shared/ActionButton";
+import Section from "../shared/Section";
 
 type Props = {
   setSelecetedPage: (value: SelectedPage) => void;

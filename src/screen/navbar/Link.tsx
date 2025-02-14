@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { SelectedPage } from "../../shared/types";
 
@@ -10,15 +10,24 @@ type Props = {
 };
 
 const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
-  const loverCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage;
+  const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage;
+
   return (
-    <AnchorLink
-      className={`${selectedPage == loverCasePage ? "text-primary-500" : ""}`}
-      href={`#${loverCasePage}`}
-      onClick={() => setSelectedPage(loverCasePage)}
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      transition={{ type: "spring", stiffness: 300 }}
     >
-      {page}
-    </AnchorLink>
+      <AnchorLink
+        className={`${
+          selectedPage === lowerCasePage ? "text-primary-500" : ""
+        }`}
+        href={`#${lowerCasePage}`}
+        onClick={() => setSelectedPage(lowerCasePage)}
+      >
+        {page}
+      </AnchorLink>
+    </motion.div>
   );
 };
 

@@ -8,10 +8,10 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY != 0) {
-        setIsTopOfPage(true);
+        setIsTopOfPage(false);
       }
       if (window.scrollY === 0) {
-        setIsTopOfPage(false);
+        setIsTopOfPage(true);
       }
     };
 
@@ -22,11 +22,8 @@ function App() {
     <>
       <div className="app bg-gray-20">
         <Navbar isTopOfPage={isTopOfPage}></Navbar>
-        <Home></Home>
-        <Benefits></Benefits>
-        <div>aa</div>
-        <div>aa</div>
-        <div>aa</div>
+        <Home />
+        <Benefits />
       </div>
     </>
   );

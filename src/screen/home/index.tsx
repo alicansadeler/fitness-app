@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { SelectedPage } from "../../shared/types";
 import ActionButton from "../../shared/ActionButton";
+import Section from "../../shared/Section";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -12,7 +13,7 @@ type Props = {
 
 const Home = ({ setSelectedPage }: Props) => {
   return (
-    <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
+    <div id="home" className="gap-16 bg-gray-20 py-28 md:h-full md:pb-0 ">
       <motion.div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6">
         <div className="z-10 mt-32 md:basis-3/5">
           <motion.div
@@ -63,7 +64,7 @@ const Home = ({ setSelectedPage }: Props) => {
           <img src={HomePageGraphic} />
         </div>
       </motion.div>
-    </section>
+    </div>
   );
 };
 
