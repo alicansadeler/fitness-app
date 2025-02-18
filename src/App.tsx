@@ -4,6 +4,7 @@ import Home from "./screen/home";
 import Benefits from "./screen/benefits";
 import OurClasses from "./screen/ourclasses";
 import { SelectedPage } from "./shared/types";
+import Contact from "./screen/contact";
 
 function App() {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(false);
@@ -36,6 +37,7 @@ function App() {
         <Home setSelectedPage={setSelectedPage} />
         <Benefits setSelectedPage={setSelectedPage} />
         <OurClasses setSelectedPage={setSelectedPage} />
+        <Contact />
       </div>
     </>
   );
