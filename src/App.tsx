@@ -5,6 +5,7 @@ import Benefits from "./screen/benefits";
 import OurClasses from "./screen/ourclasses";
 import { SelectedPage } from "./shared/types";
 import Contact from "./screen/contact";
+import Footer from "./screen/footer";
 
 function App() {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(false);
@@ -38,6 +39,7 @@ function App() {
         <Benefits setSelectedPage={setSelectedPage} />
         <OurClasses setSelectedPage={setSelectedPage} />
         <Contact />
+        <Footer />
       </div>
     </>
   );
