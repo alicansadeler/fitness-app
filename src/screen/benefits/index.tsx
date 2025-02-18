@@ -1,17 +1,13 @@
-import React from "react";
-
 import { HomeIcon, UserIcon, PhoneIcon } from "@heroicons/react/24/outline";
-
 import { motion } from "framer-motion";
-import BenefitsPageGraphic from "../assets/BenefitsPageGraphic.png";
-import { BenefitsType, SelectedPage } from "../shared/types";
-import Htext from "../shared/Htext";
-import BenefitDesing from "./benefitDesign";
-import ActionButton from "../shared/ActionButton";
-import Section from "../shared/Section";
+import BenefitsPageGraphic from "../../assets/BenefitsPageGraphic.png";
+import { BenefitsType, SelectedPage } from "../../shared/types";
+import Htext from "../../shared/Htext";
+import ActionButton from "../../shared/ActionButton";
+import BenefitDesing from "./BenefitDesign";
 
 type Props = {
-  setSelecetedPage: (value: SelectedPage) => void;
+  setSelectedPage: (value: SelectedPage) => void;
 };
 
 const benefits: Array<BenefitsType> = [
@@ -34,7 +30,7 @@ const benefits: Array<BenefitsType> = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
   },
 ];
-const Benefits = ({ setSelecetedPage }: Props) => {
+const Benefits = ({ setSelectedPage }: Props) => {
   return (
     <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
       <motion.div
@@ -154,7 +150,7 @@ const Benefits = ({ setSelecetedPage }: Props) => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                <ActionButton setSelecetedPage={setSelecetedPage}>
+                <ActionButton setSelectedPage={setSelectedPage}>
                   Join Now
                 </ActionButton>
               </motion.div>

@@ -11,7 +11,13 @@ type Props = {
 
 const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
   const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage;
+  const offsets: Record<string, number> = {
+    benefits: 20,
+    ourclasses: 100,
+    default: 80, // Varsayılan değer
+  };
 
+  const offsetValue = offsets[lowerCasePage] || offsets.default;
   return (
     <motion.div
       whileHover={{ scale: 1.1 }}
@@ -21,9 +27,10 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
       <AnchorLink
         className={`${
           selectedPage === lowerCasePage ? "text-primary-500" : ""
-        }`}
+        } transition duration-500 hover:text-primary-300`}
         href={`#${lowerCasePage}`}
         onClick={() => setSelectedPage(lowerCasePage)}
+        offset={offsetValue}
       >
         {page}
       </AnchorLink>
