@@ -1,11 +1,8 @@
-import React from "react";
 import { motion } from "framer-motion";
 import Htext from "../../shared/Htext";
 import ContactUsPageGraphic from "../../assets/ContactUsPageGraphic.png";
 
-type Props = {};
-
-const Contact = (props: Props) => {
+const Contact = () => {
   const formclassname =
     "mb-5 bg-primary-300 px-5 py-3 w-full rounded-lg placeholder-white";
 

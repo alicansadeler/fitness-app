@@ -1,11 +1,9 @@
-import React from "react";
 import HomePageGraphic from "../../assets/HomePageGraphic.png";
 import HomePageText from "../../assets/HomePageText.png";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { SelectedPage } from "../../shared/types";
 import ActionButton from "../../shared/ActionButton";
-import Section from "../../shared/Section";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;

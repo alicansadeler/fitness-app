@@ -1,5 +1,3 @@
-import React from "react";
-
 import image1 from "../../assets/1.png";
 import image2 from "../../assets/2.png";
 import image3 from "../../assets/3.png";
@@ -14,6 +12,7 @@ import Class from "./Class";
 import { motion } from "framer-motion";
 import Htext from "../../shared/Htext";
 import { ClassType, SelectedPage } from "../../shared/types";
+import { useEffect } from "react";
 
 const classes: Array<ClassType> = [
   {
@@ -86,6 +85,10 @@ type Props = {
 };
 
 const OurClasses = ({ setSelectedPage }: Props) => {
+  useEffect(() => {
+    setSelectedPage(SelectedPage.OurClasses);
+  }, [setSelectedPage]);
+
   return (
     <section id="ourclasses" className="w-full">
       <div className="mx-auto w-5/6">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Logo from "../../assets/logo.png";
 import Link from "./Link";
 import { Bars3Icon } from "@heroicons/react/20/solid";
